@@ -11,5 +11,5 @@ from /Users/benhawker/.rvm/rubies/ruby-2.1.5/bin/irb:11:in `<main>'
 A NameError is raised when a given name is invalid or undefined.
 
 
-* Suggest one way of solving the error.
+// Suggest one way of solving the error.
 We could create a class named DockingStation. If we were within our new DockingStation class, we would be able to create new DockingStation object/instance.
