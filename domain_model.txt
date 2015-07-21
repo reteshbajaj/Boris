@@ -20,3 +20,5 @@ docking_station     release_bike
 bike <— bike_status? —>true/false
 docking_station <— release_bike — > a bike
 
+Bob
+
