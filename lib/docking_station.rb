@@ -1,29 +1,34 @@
 class DockingStation
 
-  DEFAULT_CAPACITY = 20
+DEFAULT_CAPACITY = 20
+attr_reader :capacity
 
   def initialize
     @bikes = []
+    @capacity = DEFAULT_CAPACITY
   end
 
-  def dock(bmx)
+  def dock(bike)
     fail 'Docking station full' if full?
-    @bikes << bmx ##gives value bike when dock is called on argument bike
+    bikes << bike ##gives value bike when dock is called on argument bike
 ### THIS DEFINITION IS ASSIGNING THE ARGUMENT TO THE INSTANCE VARIABLE
   end
 
   def release_bike
-    fail 'No bikes available' if empty? #IE WHEN THE INSTANCE VARIABLE @BIKE IS NOT NIL
-    @bikes.pop ##ALTERNATE - Bike.new also works here
+    fail 'No bikes available' if empty? #IE WHEN THE INSTANCE VARIABLE @BIKE IS NIL
+    bikes.pop ##TRY THIS WITHOUT THE @
   end
 
   private
 
+  attr_reader :bikes
+
   def full?
-    @bikes.count >= DEFAULT_CAPACITY
+    bikes.count >= capacity
   end
 
   def empty?
-    @bikes.empty?
+    bikes.empty?
   end
+
 end

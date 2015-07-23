@@ -25,4 +25,10 @@ describe DockingStation do
       expect { subject.dock Bike.new }.to raise_error 'Docking station full'
     end
   end
+
+  it 'has a default capacity' do
+    expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY ####when we get this to work can we try subbing ".to eq" with "to be", "=", "==" & "==="
+  end
 end
+
+##expect(actual).to eq(expected)
